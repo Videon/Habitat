@@ -14,11 +14,19 @@ public class Interaction : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
 
+    [SerializeField] private Builder builder;
+
     #endregion
 
     #region Private variables
 
-    private bool hover = false;
+    private bool hover = true;
+
+    #endregion
+
+    #region Temporary variables
+
+    [SerializeField] private GameObject testBuilding;
 
     #endregion
 
@@ -30,7 +38,9 @@ public class Interaction : MonoBehaviour
 
     public void OnInteractPrimary()
     {
-        hover = !hover;
+        GameObject go = Instantiate(testBuilding);
+
+        builder.PlaceBuilding(go, markerTransform.position, 69);
     }
 
     public void OnInteractSecondary()
@@ -45,7 +55,7 @@ public class Interaction : MonoBehaviour
 #if UNITY_EDITOR
         Debug.DrawRay(ray.origin, ray.direction * 1000f, Color.yellow);
 #endif
-        
+
         //TODO ATTENTION: This only checks for specific layers. May need a more dynamic approach in the future. Change here.
         if (Physics.Raycast(ray, out hit, 10000f, layerMask))
         {

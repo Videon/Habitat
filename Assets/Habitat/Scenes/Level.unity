@@ -269,8 +269,8 @@ MonoBehaviour:
   maxX: 900
   minZ: -220
   maxZ: 890
-  minZoom: 0
-  maxZoom: 0
+  minZoom: 5
+  maxZoom: 100
 --- !u!4 &977544617
 Transform:
   m_ObjectHideFlags: 0
@@ -664,6 +664,7 @@ GameObject:
   - component: {fileID: 2099196324}
   - component: {fileID: 2099196325}
   - component: {fileID: 2099196326}
+  - component: {fileID: 2099196327}
   m_Layer: 0
   m_Name: Interaction
   m_TagString: Untagged
@@ -702,6 +703,8 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 64
+  builder: {fileID: 2099196327}
+  testBuilding: {fileID: 4995887226504854764, guid: de4fc7dc717bf49f18e3df962f9997a2, type: 3}
 --- !u!114 &2099196326
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -751,11 +754,35 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: ad9efa1b-0606-4034-9c7d-85c69cc6e3ab
     m_ActionName: Interaction/Secondary[/Mouse/rightButton]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 3c1b2a6f-0860-4411-9943-278baafce095
+    m_ActionName: CameraControl/Zoom[/Mouse/scroll/y]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Interaction
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &2099196327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2099196323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9cc7560ccc1424594957ac595f168ba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  terrainLayer:
+    serializedVersion: 2
+    m_Bits: 64
+  gridSize: 10
+  foundation: {fileID: 8609051095068666479, guid: ced9a4381142e43f985b56205cfa8abb, type: 3}
+  cellSize: 4
+  foundationHeight: 40
+  heightOffset: 1
 --- !u!1 &2133192831
 GameObject:
   m_ObjectHideFlags: 0
