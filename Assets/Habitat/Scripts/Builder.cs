@@ -11,7 +11,7 @@ public class Builder : MonoBehaviour
     [SerializeField, Tooltip("Object to be used as foundation. Must be a 1x1x1 cube!")]
     private GameObject foundation;
 
-    [SerializeField] private float cellSize = 4f;
+    [SerializeField] private float sideLength = 4f;
     [SerializeField] private float foundationHeight = 10f;
 
     [SerializeField] private float heightOffset = 0.5f;
@@ -21,30 +21,24 @@ public class Builder : MonoBehaviour
     /// <param name="amount">How many objects are spawned.</param>
     public void PlaceBuilding(GameObject building, Vector3 position, int amount)
     {
-        Vector3 placementPoint = GetHighestPoint(position, 4f); //TODO CELL SIZE SHOULD REFLECT FOUNDATION DIMENSIONS!
+        Vector3 placementPoint = new Vector3(position.x, GetHighestPoint(position, sideLength).y, position.z);
         GameObject current = new GameObject("Building_generic");
         current.transform.position = placementPoint;
 
         int dimensions = AmountToDimensions(amount);
         //Create grid
 
+        Vector3[] gridPoints = GridPoints(dimensions, sideLength);
 
-        Vector3 gridOffset = new Vector3(position.x - cellSize / 2f, position.y, position.z - cellSize / 2f);
-
-        int count = 0;
-        for (int x = 0; x < dimensions; x++)
+        for (int i = 0; i < amount; i++)
         {
-            for (int z = 0; z < dimensions; z++)
-            {
-                if (count >= amount) break;
-                Vector3 currentPos = GetHighestPoint(gridOffset + new Vector3(
-                    x * cellSize,
-                    0f,
-                    z * cellSize), cellSize);
-                PlaceFoundation(current.transform, currentPos, foundationHeight);
-                count++;
-            }
+            Vector3 currentPos = new Vector3(placementPoint.x, 0f, placementPoint.z) + gridPoints[i] + new Vector3(
+                0f,
+                GetHighestPoint(placementPoint + gridPoints[i], sideLength / 8f).y,
+                0f);
+            PlaceFoundation(current.transform, currentPos, foundationHeight);
         }
+
 
         //Determine highest point of foundation and lowest center point of building
     }
@@ -56,7 +50,7 @@ public class Builder : MonoBehaviour
         go.transform.position = position + new Vector3(0f, -foundationHeight / 2f + heightOffset, 0f);
 
         //Scaling
-        go.transform.localScale = new Vector3(cellSize, foundationHeight, cellSize);
+        go.transform.localScale = new Vector3(sideLength, foundationHeight, sideLength);
     }
 
     private Vector3 GridCenter(Vector3 position)
@@ -76,31 +70,17 @@ public class Builder : MonoBehaviour
         int dimensions = AmountToDimensions(raycasts);
 
 
-        Ray ray;
-        RaycastHit hit;
-
-        Vector3 gridOffset = new Vector3(position.x - cellSize / 2f, position.y, position.z - cellSize / 2f);
-
         List<Vector3> hitPoints = new List<Vector3>();
+        Vector3[] gridPoints = GridPoints(dimensions, cellSize / dimensions);
 
-        for (int x = 0; x < dimensions; x++)
+        for (int i = 0; i < gridPoints.Length; i++)
         {
-            for (int z = 0; z < dimensions; z++)
+            Ray ray = new Ray(position + gridPoints[i] + new Vector3(0f, raycastHeight, 0f), Vector3.down);
+
+            if (Physics.Raycast(ray, out RaycastHit hit, raycastHeight * 2f, terrainLayer))
             {
-                Vector3 origin = gridOffset + new Vector3(
-                    cellSize / dimensions * x,
-                    gridOffset.y + raycastHeight,
-                    cellSize / dimensions * z);
-
-                ray = new Ray(origin, Vector3.down);
-
-                if (Physics.Raycast(ray, out hit, 1000f, terrainLayer))
-                {
-                    hitPoints.Add(hit.point);
-                }
+                hitPoints.Add(hit.point);
             }
-
-            //Determine highest point
         }
 
         for (int i = 0; i < hitPoints.Count; i++)
@@ -120,5 +100,27 @@ public class Builder : MonoBehaviour
     {
         float sqrt = Mathf.Sqrt(amount);
         return (int) Mathf.Ceil(sqrt);
+    }
+
+    /// <summary> Generates a 2d grid of points around a given position in 3d space. </summary>
+    /// <param name="sqLength">Amount of cells as side length of a square.</param>
+    /// <param name="cellSize"></param>
+    /// <returns>Relative positions to be used with a given point.</returns>
+    private Vector3[] GridPoints(int sqLength, float cellSize)
+    {
+        Vector3[] gridPoints = new Vector3[sqLength * sqLength];
+
+        Vector3 gridOffset = new Vector3(-(sqLength / 2f) * cellSize, 0f, -(sqLength / 2f) * cellSize);
+
+        for (int z = 0; z < sqLength; z++)
+        {
+            for (int x = 0; x < sqLength; x++)
+            {
+                Vector3 point = gridOffset + new Vector3(x * cellSize, 0f, z * cellSize);
+                gridPoints[z * sqLength + x] = point;
+            }
+        }
+
+        return gridPoints;
     }
 }
