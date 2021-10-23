@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c342a9-5104-4053-8931-ca6b72873a69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +34,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991497" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35006693" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -57,10 +54,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="40520">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="47410">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="40520" />
+      <option name="pid" value="47410" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -76,7 +73,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1634919497210</updated>
-      <workItem from="1634919517854" duration="17074000" />
+      <workItem from="1634919517854" duration="29415000" />
     </task>
     <servers />
   </component>
@@ -104,29 +101,68 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>55</line>
+          <line>50</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="42" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="2055" />
+              <option value="1862" />
             </startOffsets>
             <endOffsets>
-              <option value="2149" />
+              <option value="1956" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>58</line>
+          <line>53</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="47" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="2177" />
+              <option value="1984" />
             </startOffsets>
             <endOffsets>
-              <option value="2253" />
+              <option value="2064" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
+          <line>49</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="50" containingFunctionPresentation="method 'PlaceFoundation'">
+            <startOffsets>
+              <option value="1805" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1853" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="51" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
+          <line>33</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="34" containingFunctionPresentation="method 'PlaceBuilding'">
+            <startOffsets>
+              <option value="1200" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1232" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="52" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
+          <line>35</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="36" containingFunctionPresentation="method 'PlaceBuilding'">
+            <startOffsets>
+              <option value="1255" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1446" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
