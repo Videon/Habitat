@@ -21,26 +21,32 @@ public class Builder : MonoBehaviour
     /// <param name="amount">How many objects are spawned.</param>
     public void PlaceBuilding(GameObject building, Vector3 position, int amount)
     {
-        Vector3 placementPoint = new Vector3(position.x, GetHighestPoint(position, sideLength, terrainLayer).y, position.z);
-        GameObject current = new GameObject("Building_generic");
+        Vector3 placementPoint =
+            new Vector3(position.x, GetHighestPoint(position, sideLength, terrainLayer).y, position.z);
+        GameObject current = building;
         current.transform.position = placementPoint;
 
-        int dimensions = AmountToDimensions(amount);
+        //int dimensions = AmountToDimensions(amount);
         //Create grid
 
+        //PlaceFoundations(current.transform, placementPoint, amount);
+
+        //Determine highest point of foundation and lowest center point of building
+    }
+
+    public void PlaceFoundations(Transform parent, Vector3 centerPos, int amount)
+    {
+        int dimensions = AmountToDimensions(amount);
         Vector3[] gridPoints = GridPoints(dimensions, sideLength);
 
         for (int i = 0; i < amount; i++)
         {
-            Vector3 currentPos = new Vector3(placementPoint.x, 0f, placementPoint.z) + gridPoints[i] + new Vector3(
+            Vector3 currentPos = new Vector3(centerPos.x, 0f, centerPos.z) + gridPoints[i] + new Vector3(
                 0f,
-                GetHighestPoint(placementPoint + gridPoints[i], sideLength / 8f, terrainLayer).y,
+                GetHighestPoint(centerPos + gridPoints[i], sideLength / 8f, terrainLayer).y,
                 0f);
-            PlaceFoundation(current.transform, currentPos, foundationHeight);
+            PlaceFoundation(parent, currentPos, foundationHeight);
         }
-
-
-        //Determine highest point of foundation and lowest center point of building
     }
 
     private void PlaceFoundation(Transform parent, Vector3 position, float foundationHeight)

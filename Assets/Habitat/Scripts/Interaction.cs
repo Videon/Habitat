@@ -16,6 +16,9 @@ public class Interaction : MonoBehaviour
 
     [SerializeField] private Builder builder;
 
+    [SerializeField, Tooltip("Should correspond with given cellSize.")]
+    private float markerSize = 1f;
+
     #endregion
 
     #region Private variables
@@ -25,6 +28,7 @@ public class Interaction : MonoBehaviour
     private bool _hover = true;
 
     private int _selectedBuilding = 0;
+    private int _selectedBuildingPrevious = 0;
     private GameObject[] buildingInstances;
 
     private Vector3 hidePos = new Vector3(-10000f, -10000f, -10000f);
@@ -65,7 +69,8 @@ public class Interaction : MonoBehaviour
     {
         GameObject go = Instantiate(buildings[_selectedBuilding]);
 
-        builder.PlaceBuilding(go, markerTransform.position, 69);
+        builder.PlaceBuilding(go, markerTransform.position, 69); //TODO: Adjust amount dynamically
+        go.GetComponent<Distributor>().Setup(builder);
     }
 
     public void OnInteractSecondary()
@@ -74,16 +79,24 @@ public class Interaction : MonoBehaviour
 
     public void OnSelectBuildingOne()
     {
+        buildingInstances[_selectedBuilding].transform.position = hidePos;
         _selectedBuilding = 0;
     }
 
     public void OnSelectBuildingTwo()
     {
+        buildingInstances[_selectedBuilding].transform.position = hidePos;
         _selectedBuilding = 1;
     }
 
+    /// <summary>
+    /// Projects position marker onto terrain corresponding to mouse position on screen.
+    /// </summary>
     private void Hover()
     {
+        //Adjust marker size
+        markerTransform.localScale = new Vector3(markerSize, 1, markerSize);
+
         Ray ray = mainCamera.ScreenPointToRay(Mouse.current.position.ReadValue());
         RaycastHit hit;
 
@@ -98,6 +111,8 @@ public class Interaction : MonoBehaviour
                 hit.point.x,
                 Builder.GetHighestPoint(hit.point, 4f, layerMask).y,
                 hit.point.z);
+
+            //Project currently selected building at cursor position.
             markerTransform.position = placementPosition;
             buildingInstances[_selectedBuilding].transform.position = placementPosition;
         }

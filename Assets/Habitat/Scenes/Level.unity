@@ -621,7 +621,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1373759511
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1187,6 +1187,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   builder: {fileID: 2099196327}
+  markerSize: 4
   buildings:
   - {fileID: 4995887226504854764, guid: de4fc7dc717bf49f18e3df962f9997a2, type: 3}
   - {fileID: 4995887226504854764, guid: 5044028e7a0cd4281b529f3e79bd3f61, type: 3}
@@ -1207,7 +1208,7 @@ MonoBehaviour:
     m_Bits: 64
   gridSize: 10
   foundation: {fileID: 8609051095068666479, guid: ced9a4381142e43f985b56205cfa8abb, type: 3}
-  sideLength: 4
+  sideLength: 16
   foundationHeight: 40
   heightOffset: 2
 --- !u!1001 &2121513076

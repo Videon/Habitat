@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c342a9-5104-4053-8931-ca6b72873a69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Text.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +20,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1A25F92A-66F7-46A8-9066-FDA272BEE001/7f/5c78516c/LayerMask.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../Zolar/Zolar Project/Assets/Scripts/Zolar/InteractionSystem/Interactor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -25,6 +33,7 @@
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/BuildingSystem.cs" />
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" />
+      <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" />
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" />
     </changedPaths>
   </component>
@@ -45,6 +54,14 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$PROJECT_DIR$ builds/Habitat.app/Contents/MacOS/Habitat" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$ builds/Habitat.app/Contents/MacOS" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -75,7 +92,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634919497210</updated>
       <workItem from="1634919517854" duration="35992000" />
-      <workItem from="1635037463702" duration="1918000" />
+      <workItem from="1635037463702" duration="9509000" />
     </task>
     <servers />
   </component>
@@ -104,78 +121,52 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>49</line>
+          <line>55</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="42" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="1915" />
+              <option value="2095" />
             </startOffsets>
             <endOffsets>
-              <option value="2009" />
+              <option value="2189" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>52</line>
+          <line>58</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="47" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="2037" />
+              <option value="2217" />
             </startOffsets>
             <endOffsets>
-              <option value="2117" />
+              <option value="2297" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>48</line>
+          <line>54</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="50" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="1858" />
+              <option value="2038" />
             </startOffsets>
             <endOffsets>
-              <option value="1906" />
+              <option value="2086" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>32</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="34" containingFunctionPresentation="method 'PlaceBuilding'">
-            <startOffsets>
-              <option value="1202" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1234" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>34</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="36" containingFunctionPresentation="method 'PlaceBuilding'">
-            <startOffsets>
-              <option value="1257" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1499" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>94</line>
+          <line>100</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="96" containingFunctionPresentation="method 'GetHighestPoint'">
             <startOffsets>
-              <option value="3230" />
+              <option value="3410" />
             </startOffsets>
             <endOffsets>
-              <option value="3250" />
+              <option value="3430" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="54" />
