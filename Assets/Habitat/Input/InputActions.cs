@@ -123,6 +123,22 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""SelectBuildingOne"",
+                    ""type"": ""Button"",
+                    ""id"": ""b30a2ae5-8881-4660-9256-998dfcff5e46"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""SelectBuildingTwo"",
+                    ""type"": ""Button"",
+                    ""id"": ""e9c4e224-07e2-4d5a-a7b0-f502c9aef9e2"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -147,6 +163,28 @@ public class @InputActions : IInputActionCollection, IDisposable
                     ""action"": ""Secondary"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c3f43cd6-e4a8-4b61-a7e9-eac4e536818c"",
+                    ""path"": ""<Keyboard>/q"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectBuildingOne"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""019f81fb-9033-4d92-bfd5-f9f6c54525d3"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""SelectBuildingTwo"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -161,6 +199,8 @@ public class @InputActions : IInputActionCollection, IDisposable
         m_Interaction = asset.FindActionMap("Interaction", throwIfNotFound: true);
         m_Interaction_Primary = m_Interaction.FindAction("Primary", throwIfNotFound: true);
         m_Interaction_Secondary = m_Interaction.FindAction("Secondary", throwIfNotFound: true);
+        m_Interaction_SelectBuildingOne = m_Interaction.FindAction("SelectBuildingOne", throwIfNotFound: true);
+        m_Interaction_SelectBuildingTwo = m_Interaction.FindAction("SelectBuildingTwo", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -253,12 +293,16 @@ public class @InputActions : IInputActionCollection, IDisposable
     private IInteractionActions m_InteractionActionsCallbackInterface;
     private readonly InputAction m_Interaction_Primary;
     private readonly InputAction m_Interaction_Secondary;
+    private readonly InputAction m_Interaction_SelectBuildingOne;
+    private readonly InputAction m_Interaction_SelectBuildingTwo;
     public struct InteractionActions
     {
         private @InputActions m_Wrapper;
         public InteractionActions(@InputActions wrapper) { m_Wrapper = wrapper; }
         public InputAction @Primary => m_Wrapper.m_Interaction_Primary;
         public InputAction @Secondary => m_Wrapper.m_Interaction_Secondary;
+        public InputAction @SelectBuildingOne => m_Wrapper.m_Interaction_SelectBuildingOne;
+        public InputAction @SelectBuildingTwo => m_Wrapper.m_Interaction_SelectBuildingTwo;
         public InputActionMap Get() { return m_Wrapper.m_Interaction; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -274,6 +318,12 @@ public class @InputActions : IInputActionCollection, IDisposable
                 @Secondary.started -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSecondary;
                 @Secondary.performed -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSecondary;
                 @Secondary.canceled -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSecondary;
+                @SelectBuildingOne.started -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSelectBuildingOne;
+                @SelectBuildingOne.performed -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSelectBuildingOne;
+                @SelectBuildingOne.canceled -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSelectBuildingOne;
+                @SelectBuildingTwo.started -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSelectBuildingTwo;
+                @SelectBuildingTwo.performed -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSelectBuildingTwo;
+                @SelectBuildingTwo.canceled -= m_Wrapper.m_InteractionActionsCallbackInterface.OnSelectBuildingTwo;
             }
             m_Wrapper.m_InteractionActionsCallbackInterface = instance;
             if (instance != null)
@@ -284,6 +334,12 @@ public class @InputActions : IInputActionCollection, IDisposable
                 @Secondary.started += instance.OnSecondary;
                 @Secondary.performed += instance.OnSecondary;
                 @Secondary.canceled += instance.OnSecondary;
+                @SelectBuildingOne.started += instance.OnSelectBuildingOne;
+                @SelectBuildingOne.performed += instance.OnSelectBuildingOne;
+                @SelectBuildingOne.canceled += instance.OnSelectBuildingOne;
+                @SelectBuildingTwo.started += instance.OnSelectBuildingTwo;
+                @SelectBuildingTwo.performed += instance.OnSelectBuildingTwo;
+                @SelectBuildingTwo.canceled += instance.OnSelectBuildingTwo;
             }
         }
     }
@@ -297,5 +353,7 @@ public class @InputActions : IInputActionCollection, IDisposable
     {
         void OnPrimary(InputAction.CallbackContext context);
         void OnSecondary(InputAction.CallbackContext context);
+        void OnSelectBuildingOne(InputAction.CallbackContext context);
+        void OnSelectBuildingTwo(InputAction.CallbackContext context);
     }
 }

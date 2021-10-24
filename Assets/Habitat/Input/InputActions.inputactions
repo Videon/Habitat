@@ -110,6 +110,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "SelectBuildingOne",
+                    "type": "Button",
+                    "id": "b30a2ae5-8881-4660-9256-998dfcff5e46",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "SelectBuildingTwo",
+                    "type": "Button",
+                    "id": "e9c4e224-07e2-4d5a-a7b0-f502c9aef9e2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -132,6 +148,28 @@
                     "processors": "",
                     "groups": "",
                     "action": "Secondary",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c3f43cd6-e4a8-4b61-a7e9-eac4e536818c",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectBuildingOne",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "019f81fb-9033-4d92-bfd5-f9f6c54525d3",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "SelectBuildingTwo",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

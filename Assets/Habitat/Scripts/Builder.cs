@@ -21,7 +21,7 @@ public class Builder : MonoBehaviour
     /// <param name="amount">How many objects are spawned.</param>
     public void PlaceBuilding(GameObject building, Vector3 position, int amount)
     {
-        Vector3 placementPoint = new Vector3(position.x, GetHighestPoint(position, sideLength).y, position.z);
+        Vector3 placementPoint = new Vector3(position.x, GetHighestPoint(position, sideLength, terrainLayer).y, position.z);
         GameObject current = new GameObject("Building_generic");
         current.transform.position = placementPoint;
 
@@ -34,7 +34,7 @@ public class Builder : MonoBehaviour
         {
             Vector3 currentPos = new Vector3(placementPoint.x, 0f, placementPoint.z) + gridPoints[i] + new Vector3(
                 0f,
-                GetHighestPoint(placementPoint + gridPoints[i], sideLength / 8f).y,
+                GetHighestPoint(placementPoint + gridPoints[i], sideLength / 8f, terrainLayer).y,
                 0f);
             PlaceFoundation(current.transform, currentPos, foundationHeight);
         }
@@ -60,7 +60,8 @@ public class Builder : MonoBehaviour
         return center;
     }
 
-    private Vector3 GetHighestPoint(Vector3 position, float cellSize)
+    //TODO MAKE STATIC
+    public static Vector3 GetHighestPoint(Vector3 position, float cellSize, LayerMask layers)
     {
         Vector3 highestPoint = new Vector3(0f, -10000f, 0f);
 
@@ -77,7 +78,7 @@ public class Builder : MonoBehaviour
         {
             Ray ray = new Ray(position + gridPoints[i] + new Vector3(0f, raycastHeight, 0f), Vector3.down);
 
-            if (Physics.Raycast(ray, out RaycastHit hit, raycastHeight * 2f, terrainLayer))
+            if (Physics.Raycast(ray, out RaycastHit hit, raycastHeight * 2f, layers))
             {
                 hitPoints.Add(hit.point);
             }
@@ -96,7 +97,7 @@ public class Builder : MonoBehaviour
 
     /// <summary> Calculates square dimensions of a grid to fit given amount. </summary>
     /// <returns></returns>
-    private int AmountToDimensions(int amount)
+    private static int AmountToDimensions(int amount)
     {
         float sqrt = Mathf.Sqrt(amount);
         return (int) Mathf.Ceil(sqrt);
@@ -106,7 +107,7 @@ public class Builder : MonoBehaviour
     /// <param name="sqLength">Amount of cells as side length of a square.</param>
     /// <param name="cellSize"></param>
     /// <returns>Relative positions to be used with a given point.</returns>
-    private Vector3[] GridPoints(int sqLength, float cellSize)
+    private static Vector3[] GridPoints(int sqLength, float cellSize)
     {
         Vector3[] gridPoints = new Vector3[sqLength * sqLength];
 
