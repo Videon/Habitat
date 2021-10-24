@@ -2,14 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c342a9-5104-4053-8931-ca6b72873a69" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Input/InputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Input/InputActions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Input/InputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Input/InputActions.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Text.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1634919497210</updated>
       <workItem from="1634919517854" duration="35992000" />
-      <workItem from="1635037463702" duration="1191000" />
+      <workItem from="1635037463702" duration="1918000" />
     </task>
     <servers />
   </component>
