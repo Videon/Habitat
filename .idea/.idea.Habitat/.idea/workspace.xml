@@ -2,14 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c342a9-5104-4053-8931-ca6b72873a69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/PoissonDiscSampling.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/PoissonDiscSampling.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,9 +32,10 @@
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/CameraControl.cs" />
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Building.cs" />
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/BuildingSystem.cs" />
-      <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" />
-      <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" />
       <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" />
+      <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/PoissonDiscSampling.cs" />
+      <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" />
+      <option value="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1zrwPV9I9FCwObMoARJdUqBHicX" />
@@ -92,7 +93,8 @@
       <option name="presentableId" value="Default" />
       <updated>1634919497210</updated>
       <workItem from="1634919517854" duration="35992000" />
-      <workItem from="1635037463702" duration="9509000" />
+      <workItem from="1635037463702" duration="12541000" />
+      <workItem from="1635198478098" duration="1607000" />
     </task>
     <servers />
   </component>
@@ -121,52 +123,52 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>55</line>
+          <line>65</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="42" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="2095" />
+              <option value="2406" />
             </startOffsets>
             <endOffsets>
-              <option value="2189" />
+              <option value="2500" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>58</line>
+          <line>68</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="47" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="2217" />
+              <option value="2528" />
             </startOffsets>
             <endOffsets>
-              <option value="2297" />
+              <option value="2608" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>54</line>
+          <line>64</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="50" containingFunctionPresentation="method 'PlaceFoundation'">
             <startOffsets>
-              <option value="2038" />
+              <option value="2349" />
             </startOffsets>
             <endOffsets>
-              <option value="2086" />
+              <option value="2397" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>100</line>
+          <line>110</line>
           <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="96" containingFunctionPresentation="method 'GetHighestPoint'">
             <startOffsets>
-              <option value="3410" />
+              <option value="3721" />
             </startOffsets>
             <endOffsets>
-              <option value="3430" />
+              <option value="3741" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="54" />

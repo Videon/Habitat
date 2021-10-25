@@ -70,7 +70,7 @@ public class Distributor : MonoBehaviour
         //Urban growth
         if (distance < greeneryDistance)
         {
-            amountUrban = (int) (10f * 1f / distance);
+            amountUrban = (int) (10f * distributionRadius / distance);
             amountUrban = Mathf.Clamp(amountUrban, 4, 200);
         }
         //Nature growth
