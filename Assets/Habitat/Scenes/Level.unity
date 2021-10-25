@@ -1208,9 +1208,13 @@ MonoBehaviour:
     m_Bits: 64
   gridSize: 10
   foundation: {fileID: 8609051095068666479, guid: ced9a4381142e43f985b56205cfa8abb, type: 3}
-  sideLength: 16
+  sideLength: 4
   foundationHeight: 40
   heightOffset: 2
+  testBuildings:
+  - {fileID: 8466777097891039315, guid: 26543f377f7cb44cb9b4e5cb59629531, type: 3}
+  - {fileID: 6808058457213218701, guid: b2fb1a958ee184532b450bd716858f3e, type: 3}
+  - {fileID: 7630370450651101360, guid: 34be239fb16b3453fb469c722c85adf1, type: 3}
 --- !u!1001 &2121513076
 PrefabInstance:
   m_ObjectHideFlags: 0

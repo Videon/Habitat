@@ -1,7 +1,7 @@
-using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Builder : MonoBehaviour
 {
@@ -15,6 +15,12 @@ public class Builder : MonoBehaviour
     [SerializeField] private float foundationHeight = 10f;
 
     [SerializeField] private float heightOffset = 0.5f;
+
+    #region Temporary variables
+
+    [SerializeField] private GameObject[] testBuildings;
+
+    #endregion
 
     /// <summary> Instantiate the given object. </summary>
     /// <param name="go">The object (prefab) to spawn.</param>
@@ -46,6 +52,10 @@ public class Builder : MonoBehaviour
                 GetHighestPoint(centerPos + gridPoints[i], sideLength / 8f, terrainLayer).y,
                 0f);
             PlaceFoundation(parent, currentPos, foundationHeight);
+
+            //TODO TEMPORARY EYE CANDY
+            GameObject go = Instantiate(testBuildings[Random.Range(0, testBuildings.Length)]);
+            go.transform.position = currentPos;
         }
     }
 
