@@ -972,6 +972,14 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 3c1b2a6f-0860-4411-9943-278baafce095
     m_ActionName: CameraControl/Zoom[/Mouse/scroll/y]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b30a2ae5-8881-4660-9256-998dfcff5e46
+    m_ActionName: Interaction/SelectBuildingOne[/Keyboard/q]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: e9c4e224-07e2-4d5a-a7b0-f502c9aef9e2
+    m_ActionName: Interaction/SelectBuildingTwo[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CameraControl
@@ -2183,6 +2191,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   builder: {fileID: 2099196327}
+  markerSize: 1
   buildings: []
 --- !u!114 &2099196326
 MonoBehaviour:
@@ -2262,6 +2271,7 @@ MonoBehaviour:
   sideLength: 4
   foundationHeight: 40
   heightOffset: 1
+  testBuildings: []
 --- !u!1001 &2117912505
 PrefabInstance:
   m_ObjectHideFlags: 0
