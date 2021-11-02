@@ -37,7 +37,7 @@ public class Interaction : MonoBehaviour
 
     #region Temporary variables
 
-    [SerializeField] private GameObject[] buildings; //Currently only two buildings are supported.
+    [SerializeField] private Building[] buildings; //Currently only two buildings are supported.
 
     #endregion
 
@@ -55,7 +55,7 @@ public class Interaction : MonoBehaviour
         buildingInstances = new GameObject[buildings.Length];
         for (int i = 0; i < buildings.Length; i++)
         {
-            buildingInstances[i] = Instantiate(buildings[i]);
+            buildingInstances[i] = Instantiate(buildings[i].gameObject);
             buildingInstances[i].transform.position = hidePos;
         }
     }
@@ -67,7 +67,8 @@ public class Interaction : MonoBehaviour
 
     public void OnInteractPrimary()
     {
-        GameObject go = Instantiate(buildings[_selectedBuilding]);
+        builder.CheckAreaFree(markerTransform.position, 1);
+        GameObject go = Instantiate(buildings[_selectedBuilding].gameObject);
 
         builder.PlaceBuilding(go, markerTransform.position, 69); //TODO: Adjust amount dynamically
         go.GetComponent<Distributor>().Setup(builder);

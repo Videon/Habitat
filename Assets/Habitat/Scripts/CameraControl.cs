@@ -9,7 +9,7 @@ public class CameraControl : MonoBehaviour
     #region Serialized variables
 
     [SerializeField] private Transform cameraRig;
-    [SerializeField] private Camera camera;
+    [SerializeField] private Camera viewCamera;
     [SerializeField] private float cameraSpeed = 10.0f;
     [SerializeField] private float zoomSpeed = 10.0f;
 
@@ -36,8 +36,8 @@ public class CameraControl : MonoBehaviour
 
     private void AdjustZoom(float value)
     {
-        camera.orthographicSize += value * Time.deltaTime * zoomSpeed;
-        camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, minZoom, maxZoom);
+        viewCamera.orthographicSize += value * Time.deltaTime * zoomSpeed;
+        viewCamera.orthographicSize = Mathf.Clamp(viewCamera.orthographicSize, minZoom, maxZoom);
     }
 
     #region Input callbacks

@@ -24,6 +24,8 @@ public class Distributor : MonoBehaviour
     /// <param name="radius"> Radius around distributor that is checked for other distributors. </param>
     private void Distribute(float radius)
     {
+        //TODO Refer to https://www.redblobgames.com/grids/circle-drawing/ for circular placement implementation
+        
         Physics.OverlapSphereNonAlloc(transform.position, radius, colliders, lm);
 
         List<Distributor> distributors = new List<Distributor>();
@@ -76,7 +78,7 @@ public class Distributor : MonoBehaviour
         //Nature growth
         else
         {
-            radiusGreenery = distance;
+            //TODO IMPLEMENT
         }
 
         builder.PlaceFoundations(transform, transform.position, amountUrban);

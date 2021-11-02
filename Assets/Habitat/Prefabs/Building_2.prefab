@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5819958615202441331}
   - component: {fileID: 7488597595849625422}
   - component: {fileID: 6412222914842715162}
+  - component: {fileID: 1214510925389829394}
   m_Layer: 7
   m_Name: Building_2
   m_TagString: Untagged
@@ -62,6 +63,19 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1214510925389829394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4995887226504854764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8996c98da27944e5caa3977579ab6f3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _dimensions: 3
 --- !u!1001 &5539081292228551642
 PrefabInstance:
   m_ObjectHideFlags: 0

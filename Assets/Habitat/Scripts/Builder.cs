@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
@@ -5,8 +6,10 @@ using Random = UnityEngine.Random;
 
 public class Builder : MonoBehaviour
 {
+    private WorldGrid worldGrid;
+
+    [SerializeField] private World world;
     [SerializeField] private LayerMask terrainLayer;
-    [SerializeField] private float gridSize = 10f;
 
     [SerializeField, Tooltip("Object to be used as foundation. Must be a 1x1x1 cube!")]
     private GameObject foundation;
@@ -18,52 +21,93 @@ public class Builder : MonoBehaviour
 
     #region Temporary variables
 
-    [SerializeField] private GameObject[] testBuildings;
+    [SerializeField] private Building[] testBuildings;
 
     #endregion
+
+    private void Awake()
+    {
+        worldGrid = world.Worldgrid;
+    }
+
+    /// <summary> Checks if an area of equal side lengths in the grid is not obstructed. </summary>
+    /// <param name="position">Center position to check.</param>
+    /// <param name="dimensions">Side dimensions in amount of adjacent grid cells.</param>
+    /// <returns>True if free, false if obstructed.</returns>
+    public bool CheckAreaFree(Vector3 position, int dimensions)
+    {
+        Vector2Int cell = world.PosToCell(worldGrid, position);
+
+        int offset = (int)(dimensions / 2f);
+
+
+        for (int x = 0; x < dimensions; x++)
+        {
+            for (int y = 0; y < dimensions; y++)
+            {
+                if (world.Worldgrid.cellState[cell.x - offset, cell.y - offset] > 0) return false;
+            }
+        }
+
+        return true;
+    }
 
     /// <summary> Instantiate the given object. </summary>
     /// <param name="go">The object (prefab) to spawn.</param>
     /// <param name="amount">How many objects are spawned.</param>
     public void PlaceBuilding(GameObject building, Vector3 position, int amount)
     {
+        if (!CheckAreaFree(position, 1)) return;
+        Vector2Int cell = world.PosToCell(worldGrid, position);
+        world.Worldgrid.cellState[cell.x, cell.y] = 1;
         Vector3 placementPoint =
-            new Vector3(position.x, GetHighestPoint(position, sideLength, terrainLayer).y, position.z);
+            worldGrid.cellCenters[cell.x, cell.y] + Vector3.up * worldGrid.cellHeights[cell.x, cell.y];
         GameObject current = building;
         current.transform.position = placementPoint;
-
-        //int dimensions = AmountToDimensions(amount);
-        //Create grid
-
-        //PlaceFoundations(current.transform, placementPoint, amount);
-
-        //Determine highest point of foundation and lowest center point of building
     }
 
     public void PlaceFoundations(Transform parent, Vector3 centerPos, int amount)
     {
-        int dimensions = AmountToDimensions(amount);
-        Vector3[] gridPoints = GridPoints(dimensions, sideLength);
+        Vector2Int centerCell = world.PosToCell(worldGrid, centerPos);
 
-        for (int i = 0; i < amount; i++)
+        int sideLength = (int)Mathf.Sqrt(amount); //TODO Implement placement of otherwise cut-off buildings
+        int offset = (int)(sideLength / 2f);
+
+        for (int x = 0; x < sideLength; x++)
         {
-            Vector3 currentPos = new Vector3(centerPos.x, 0f, centerPos.z) + gridPoints[i] + new Vector3(
-                0f,
-                GetHighestPoint(centerPos + gridPoints[i], sideLength / 8f, terrainLayer).y,
-                0f);
-            PlaceFoundation(parent, currentPos, foundationHeight);
+            for (int y = 0; y < sideLength; y++)
+            {
+                int posX = centerCell.x - offset + x;
+                int posY = centerCell.y - offset + y;
 
-            //TODO TEMPORARY EYE CANDY
-            GameObject go = Instantiate(testBuildings[Random.Range(0, testBuildings.Length)]);
-            go.transform.position = currentPos;
+                //Check if within worldGrid bounds
+                if (posX < 0 || posX >= worldGrid.cellCenters.GetLength(0)
+                             || posY < 0 || posY >= worldGrid.cellCenters.GetLength(1)) continue;
+
+                //Placement
+                Vector3 placementPoint =
+                    worldGrid.cellCenters[posX, posY] + Vector3.up * worldGrid.cellHeights[posX, posY];
+                PlaceFoundation(parent, placementPoint, foundationHeight);
+                GameObject go = Instantiate(testBuildings[Random.Range(0, testBuildings.Length)].gameObject);
+                go.transform.position = placementPoint;
+            }
         }
     }
 
     private void PlaceFoundation(Transform parent, Vector3 position, float foundationHeight)
     {
-        //Placement. Offset foundation so that is at placement point.
+        //Placement.
+        Vector2Int cell = world.PosToCell(worldGrid, position);
+
+        world.Worldgrid.cellState[cell.x, cell.y] = 1;
+
         GameObject go = Instantiate(foundation, parent);
-        go.transform.position = position + new Vector3(0f, -foundationHeight / 2f + heightOffset, 0f);
+
+        Vector3 placementPoint =
+            worldGrid.cellCenters[cell.x, cell.y] + Vector3.up * worldGrid.cellHeights[cell.x, cell.y]
+            - Vector3.up * foundationHeight / 2f;
+
+        go.transform.position = placementPoint;
 
         //Scaling
         go.transform.localScale = new Vector3(sideLength, foundationHeight, sideLength);
@@ -116,7 +160,7 @@ public class Builder : MonoBehaviour
     private static int AmountToDimensions(int amount)
     {
         float sqrt = Mathf.Sqrt(amount);
-        return (int) Mathf.Ceil(sqrt);
+        return (int)Mathf.Ceil(sqrt);
     }
 
     /// <summary> Generates a 2d grid of points around a given position in 3d space. </summary>

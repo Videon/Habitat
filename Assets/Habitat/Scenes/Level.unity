@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraRig: {fileID: 977544617}
-  camera: {fileID: 2133192833}
+  viewCamera: {fileID: 2133192833}
   cameraSpeed: 40
   zoomSpeed: 10
   minX: -180
@@ -394,6 +394,10 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: e9c4e224-07e2-4d5a-a7b0-f502c9aef9e2
     m_ActionName: Interaction/SelectBuildingTwo[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: f6ceac8e-961f-40db-8790-5f378472b05d
+    m_ActionName: Menu/Select[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: CameraControl
@@ -1044,6 +1048,56 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &1927815956
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1927815958}
+  - component: {fileID: 1927815957}
+  m_Layer: 0
+  m_Name: World
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1927815957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927815956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60197adeceee4bd08e7fa9ee298ecf3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  origin: {x: 0, y: -100, z: 0}
+  size: {x: 1000, y: 600, z: 1000}
+  dimensions: 256
+  heightCheckTargetLayers:
+    serializedVersion: 2
+    m_Bits: 64
+  heightCheckOffset: {x: 0, y: 1000, z: 0}
+--- !u!4 &1927815958
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927815956}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2009252925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1189,8 +1243,8 @@ MonoBehaviour:
   builder: {fileID: 2099196327}
   markerSize: 4
   buildings:
-  - {fileID: 4995887226504854764, guid: de4fc7dc717bf49f18e3df962f9997a2, type: 3}
-  - {fileID: 4995887226504854764, guid: 5044028e7a0cd4281b529f3e79bd3f61, type: 3}
+  - {fileID: -3697694109226924806, guid: de4fc7dc717bf49f18e3df962f9997a2, type: 3}
+  - {fileID: 1214510925389829394, guid: 5044028e7a0cd4281b529f3e79bd3f61, type: 3}
 --- !u!114 &2099196327
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1203,18 +1257,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9cc7560ccc1424594957ac595f168ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  world: {fileID: 1927815957}
   terrainLayer:
     serializedVersion: 2
     m_Bits: 64
-  gridSize: 10
   foundation: {fileID: 8609051095068666479, guid: ced9a4381142e43f985b56205cfa8abb, type: 3}
   sideLength: 4
   foundationHeight: 40
   heightOffset: 2
   testBuildings:
-  - {fileID: 8466777097891039315, guid: 26543f377f7cb44cb9b4e5cb59629531, type: 3}
-  - {fileID: 6808058457213218701, guid: b2fb1a958ee184532b450bd716858f3e, type: 3}
-  - {fileID: 7630370450651101360, guid: 34be239fb16b3453fb469c722c85adf1, type: 3}
+  - {fileID: 7168946210290902287, guid: 26543f377f7cb44cb9b4e5cb59629531, type: 3}
+  - {fileID: -3385216505410406972, guid: b2fb1a958ee184532b450bd716858f3e, type: 3}
+  - {fileID: -7022849494136891239, guid: 34be239fb16b3453fb469c722c85adf1, type: 3}
 --- !u!1001 &2121513076
 PrefabInstance:
   m_ObjectHideFlags: 0
