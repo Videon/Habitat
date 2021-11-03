@@ -86,8 +86,8 @@ public class Builder : MonoBehaviour
 
                 //Placement
                 Vector3 placementPoint =
-                    worldGrid.cellCenters[posX, posY] + Vector3.up * worldGrid.cellHeights[posX, posY];
-                PlaceFoundation(parent, placementPoint, foundationHeight);
+                    worldGrid.cellCenters[posX, posY] + Vector3.up * (worldGrid.cellHeights[posX, posY]);
+                PlaceFoundation(parent, placementPoint + Vector3.up * heightOffset, foundationHeight);
                 GameObject go = Instantiate(testBuildings[Random.Range(0, testBuildings.Length)].gameObject);
                 go.transform.position = placementPoint;
             }

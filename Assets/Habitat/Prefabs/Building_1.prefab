@@ -50,7 +50,7 @@ MonoBehaviour:
   lm:
     serializedVersion: 2
     m_Bits: 128
-  distributionRadius: 80
+  distributionRadius: 120
 --- !u!135 &345810979897869849
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -185,6 +185,18 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: d2a26df98b4855247b681e26618e567c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2a26df98b4855247b681e26618e567c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2a26df98b4855247b681e26618e567c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: d2a26df98b4855247b681e26618e567c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -300,6 +312,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7071182760956848314, guid: d2a26df98b4855247b681e26618e567c, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0cb19e2bf8e864415b141baca357511a, type: 2}
     - target: {fileID: 8513859187771203891, guid: d2a26df98b4855247b681e26618e567c, type: 3}
       propertyPath: m_Layer
       value: 0
