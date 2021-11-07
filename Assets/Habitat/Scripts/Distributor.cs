@@ -11,12 +11,14 @@ public class Distributor : MonoBehaviour
     private Collider[] colliders = new Collider[16];
 
     private Builder builder;
+    private World world;
 
     public bool WasActivated { get; private set; } = false;
 
     public void Setup(Builder builder)
     {
         this.builder = builder;
+        world = GameObject.FindGameObjectWithTag("World").GetComponent<World>();
         Distribute(distributionRadius);
     }
 
@@ -25,7 +27,7 @@ public class Distributor : MonoBehaviour
     private void Distribute(float radius)
     {
         //TODO Refer to https://www.redblobgames.com/grids/circle-drawing/ for circular placement implementation
-        
+
         Physics.OverlapSphereNonAlloc(transform.position, radius, colliders, lm);
 
         List<Distributor> distributors = new List<Distributor>();
@@ -72,13 +74,19 @@ public class Distributor : MonoBehaviour
         //Urban growth
         if (distance < greeneryDistance)
         {
-            amountUrban = (int) (10f * distributionRadius / distance);
+            amountUrban = (int)(10f * distributionRadius / distance);
             amountUrban = Mathf.Clamp(amountUrban, 4, 200);
         }
         //Nature growth
         else
         {
-            //TODO IMPLEMENT
+            MapPainter mp = GameObject.FindGameObjectWithTag("MapPainter").GetComponent<MapPainter>();
+
+            Vector2 startPos = world.PosToCell(world.Worldgrid, transform.position);
+            Vector2 endPos = world.PosToCell(world.Worldgrid, distributor.transform.position);
+
+
+            mp.PaintPixels(startPos,endPos);
         }
 
         builder.PlaceFoundations(transform, transform.position, amountUrban);
