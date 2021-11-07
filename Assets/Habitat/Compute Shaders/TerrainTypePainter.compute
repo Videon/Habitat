@@ -1,0 +1,30 @@
+// Each #kernel tells which function to compile; you can have many kernels
+#pragma kernel CSMain
+
+// Create a RenderTexture with enableRandomWrite flag and set it
+// with cs.SetTexture
+RWTexture2D<float4> _Result;
+
+int _Dimensions;
+RWStructuredBuffer<float4> _Positions;
+
+
+float Line(float2 p, float2 a, float2 b)
+{
+    float2 pa = p - a, ba = b - a;
+    float h = saturate(dot(pa, ba) / dot(ba, ba));
+    float2 d = pa - ba * h;
+    return dot(d, d);
+}
+
+
+[numthreads(8,8,1)]
+void CSMain(uint3 id : SV_DispatchThreadID)
+{
+    float2 uv = float2((float)id.x / _Dimensions, (float)id.y / _Dimensions);
+    
+    float k = Line(uv, float2(_Positions[0].x / _Dimensions, _Positions[0].y / _Dimensions),
+                   float2(_Positions[0].z / _Dimensions, _Positions[0].w / _Dimensions));
+    float thickness = 0.001;
+    _Result[id.xy] = _Result[id.xy] + lerp(float4(1, 1, 1, 1), float4(0, 0, 0, 1), smoothstep(0.0, thickness, k));
+}

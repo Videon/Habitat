@@ -2,10 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76c342a9-5104-4053-8931-ca6b72873a69" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Compute Shaders/HeightMapPainter.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Compute Shaders/HeightMapPainter.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Compute Shaders/TerrainTypePainter.compute" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Compute Shaders/TerrainTypePainter.compute.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Building.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Building.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/VFX/Vegetation_Basic.vfx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Habitat/VFX/Vegetation_Basic.vfx.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ProjectSettings/TimelineSettings.asset" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/GlobalNamespace.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UIElements.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Cloud.Collaborate.Components.ChangeListEntries.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Cloud.Collaborate.Components.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.Cloud.Collaborate.Views.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/Unity.UI.Builder.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.PackageManager.UI.Internal.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.Rendering.LookDev.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.ShaderGraph.Drawing.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.Debugger.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.UIElements.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEditor.VFX.UI.xsd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/UIElementsSchema/UnityEngine.UIElements.xsd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Habitat/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Building_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Building.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Building.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Material/Glow_Green.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Material/Glow_Green.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Material/Glow_Orange.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Material/Glow_Orange.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Material/Terrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Material/Terrain.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Residential_1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Residential_1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Residential_2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Residential_2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Residential_3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Prefabs/Residential_3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level/Global Volume Profile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scenes/Level/Global Volume Profile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Compute.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Compute Shaders.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Compute/TerrainPainter.compute" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Compute/TerrainPainter.compute.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Habitat/Shaders/Terrain.shadergraph" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Habitat/Shaders/Terrain.shadergraph" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,7 +56,6 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/1A25F92A-66F7-46A8-9066-FDA272BEE001/7f/5c78516c/LayerMask.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Building.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Habitat/Scripts/Interaction.cs" root0="FORCE_HIGHLIGHTING" />
@@ -47,7 +85,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35006693" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.35035306" />
     <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.0" />
     <property name="Discover.Launch.Via.Unity" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
@@ -75,10 +113,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="36274">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="36274" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -98,7 +136,11 @@
       <workItem from="1635037463702" duration="12541000" />
       <workItem from="1635198478098" duration="2210000" />
       <workItem from="1635453470015" duration="13897000" />
-      <workItem from="1635883819164" duration="10508000" />
+      <workItem from="1635883819164" duration="11671000" />
+      <workItem from="1636038825752" duration="1595000" />
+      <workItem from="1636040525379" duration="19909000" />
+      <workItem from="1636205267936" duration="9671000" />
+      <workItem from="1636292846827" duration="1066000" />
     </task>
     <servers />
   </component>
@@ -128,56 +170,56 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>109</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="42" containingFunctionPresentation="method 'PlaceFoundation'">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs</url>
+          <line>88</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Distributor.cs" initialLine="94" containingFunctionPresentation="method 'Build'">
             <startOffsets>
-              <option value="3955" />
+              <option value="2753" />
             </startOffsets>
             <endOffsets>
-              <option value="3994" />
+              <option value="2785" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>112</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="47" containingFunctionPresentation="method 'PlaceFoundation'">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs</url>
+          <line>68</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs" initialLine="68" containingFunctionPresentation="method 'MakeHeightMap'">
             <startOffsets>
-              <option value="4022" />
+              <option value="2044" />
             </startOffsets>
             <endOffsets>
-              <option value="4102" />
+              <option value="2082" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="19" />
+          <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>99</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="50" containingFunctionPresentation="method 'PlaceFoundation'">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs</url>
+          <line>69</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs" initialLine="69" containingFunctionPresentation="method 'MakeHeightMap'">
             <startOffsets>
-              <option value="-1" />
+              <option value="2091" />
             </startOffsets>
             <endOffsets>
-              <option value="-1" />
+              <option value="2142" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="51" />
+          <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs</url>
-          <line>154</line>
-          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/Builder.cs" initialLine="96" containingFunctionPresentation="method 'GetHighestPoint'">
+          <url>file://$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs</url>
+          <line>81</line>
+          <properties documentPath="$PROJECT_DIR$/Assets/Habitat/Scripts/MapPainter.cs" initialLine="81" containingFunctionPresentation="method 'MakeHeightMap'">
             <startOffsets>
-              <option value="5215" />
+              <option value="2509" />
             </startOffsets>
             <endOffsets>
-              <option value="5235" />
+              <option value="2571" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="54" />
+          <option name="timeStamp" value="60" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

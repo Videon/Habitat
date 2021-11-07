@@ -11,6 +11,8 @@ public class Builder : MonoBehaviour
     [SerializeField] private World world;
     [SerializeField] private LayerMask terrainLayer;
 
+    [SerializeField] private MapPainter mapPainter;
+
     [SerializeField, Tooltip("Object to be used as foundation. Must be a 1x1x1 cube!")]
     private GameObject foundation;
 
@@ -28,6 +30,7 @@ public class Builder : MonoBehaviour
     private void Awake()
     {
         worldGrid = world.Worldgrid;
+        mapPainter.worldGrid = worldGrid;
     }
 
     /// <summary> Checks if an area of equal side lengths in the grid is not obstructed. </summary>
